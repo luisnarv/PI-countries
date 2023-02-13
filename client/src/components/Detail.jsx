@@ -14,6 +14,8 @@ useEffect(()=> {
 dispatch(GetDetail(props.match.params.id));
 },[dispatch])
 
+
+console.log(detail)
 const activities = detail.activities?.map(e => {
     
     return { 
@@ -21,7 +23,9 @@ const activities = detail.activities?.map(e => {
         name: e.name,
         difficulty: e.difficulty,
         duration: e.duration,
-        season: e.season
+        season: e.season,
+        time: e.time,
+        details: e.details,
     }
   
 })
@@ -62,7 +66,7 @@ return(
               
 </div>
 
-<div>
+<div className={style.fon}>
 {activities?.length > 0 ? activities?.map(e => {
                                         return ( 
                                         <div>
@@ -73,6 +77,8 @@ return(
                                                 <p>Difficulty: {e.difficulty}</p>
                                                 <p>Duration: {e.duration}</p>
                                                 <p>Season: {e.season}</p>
+                                                <p>Time: {e.time}</p>
+                                                <p>Details: {e.details}</p>
                                                 <hr></hr>
                                             </div>
                                             </div>

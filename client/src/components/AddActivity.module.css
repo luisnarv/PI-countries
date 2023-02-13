@@ -5,13 +5,42 @@
     flex-direction: column;
     padding:200px 100px 310px 10px ;
     margin: -50px -30px 0px 0px;
+    font-family:Copperplate Gothic Light;
+    background-image: url(../IMG/5.1.jpg);
+    width: 1490px;
+    height: 336px;
 
 }
 
 .container{
-    text-align: center;
+    
     padding: 2%;
-    background: green;
+    background: rgba(0, 128, 0, 0.541);
     border-radius: 3%;
     margin: 10px 300px 10px 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.select{
+    background-color: rgb(202, 222, 202);
+    border-radius: 5px;
+    border: 2px solid;
+    position: relative;
+    left: 150px;
+    top: -18px;
+}
+
+.select2{
+
+    right: 50px;
+}
+.button{
+    position: relative;
+    left: 300px;
+    background-color: aqua;
+    border: 3px solid;
+    cursor: pointer;
 }

@@ -6,7 +6,7 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 import Paginado from "./Paginado";
 import style from "./Home.module.css";
-
+import img from "../IMG/2.4.png";
 
 
 
@@ -39,6 +39,7 @@ export default function Home(){
 
     useEffect(()=>{
         dispatch(GetCountries());
+        // dispatch(filContinent())
     },[dispatch])
 
 function handleClick(e){
@@ -54,7 +55,6 @@ function handlePopulations(e) {
     dispatch(filPopulation(e.target.value))
     setOrder(e.target.value)
 }
-
 
     function handleContinents(e) {
        //e.preventDefault();
@@ -74,22 +74,23 @@ function handlePopulations(e) {
     }
 
 
-
  return (
  <div className={style.container}>
+
+    
             
-            <h1>Api Countries</h1>
-            <div c>
-<div className={style.nav}>
-                <Link to= "/Activity">crear actividad</Link>
-          <input type='text'  placeholder="ID" onChange={handleSearch}/>
+            <h1 className={style.txt}>Api Countries</h1> 
+     <div>
+          <div className={style.nav}>
+                <Link to= "/Activity">
+                     <button className={style.button}>Crear actividad</button> 
+                     </Link>
+                         <input className={style.search}type='text'  placeholder="Search country ...            🔍" onChange={handleSearch}/>
 
- <button onClick={e=>{handleClick(e)}}  >volver a cargar todas las countries</button>
+                               <button className={style.button5} onClick={e=>{handleClick(e)}}>Clean filters 🧹</button>
 
-
-
-<div>
-                    <select onChange={e=> handleContinents(e)}>
+                   <div>
+                       <select className={style.button2} onChange={e=> handleContinents(e)}>
                         <option value='All' key='All'>All continents</option>
                         <option value='Africa' key='Africa'>Africa</option>
                         <option value='Antarctica' key='Antarctica'>Antarctica</option>
@@ -98,31 +99,31 @@ function handlePopulations(e) {
                         <option value='North America' key='NorthAmerica'>North America</option>
                         <option value='Oceania' key='Oceania'>Oceania</option>
                         <option value='South America' key='SouthAmerica'>South America</option>
-                    </select>
-                </div>
+                      </select>
+                   </div>
 
       
-        <div> <select onChange={e=> handlePopulations(e)}>
+                     <div>
+                       <select className={style.button3} onChange={e=> handlePopulations(e)}>
                         <option value='Max' key='Max'>Max population</option>
                         <option value='Min' key='Min'>Min population</option>
-                    </select></div>
+                       </select>
+                    </div>
 
-
+                 
                  <div>
-                 <div>
-                    <select onChange={handleAZ}>
+                    <select  className={style.button4} onChange={handleAZ}>
                         <option value='AZ' key='AZ'>A-Z</option>
                         <option value='ZA' key='ZA'>Z-A</option>
                     </select>
                 </div>
-      
-      {/* paginado con estados */}
-
     
-       </div> 
+       
        </div>
-
+<img className={style.home} src={img} alt="" />
        <div >
+    {/* paginado con estados */}
+     
        <Paginado
 countriesPage={countriesPage+1}
 allCountries = {allCountries.length}
@@ -149,7 +150,10 @@ paginado = {paginado}
                     })
                 }
 </div>
+
             </div>
+
+
         </div>
     )
 

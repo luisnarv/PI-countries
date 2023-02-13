@@ -41,7 +41,9 @@ router.get('/:id', async (req, res, next) => {
                         name: e.name,
                         difficulty: e.difficulty,
                         duration: e.duration,
-                        season: e.season
+                        season: e.season,
+                        time:e.time,
+                        detail:e.detail
                     }
                 })
             }

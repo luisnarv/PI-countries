@@ -25,6 +25,18 @@ duration:{
 season:{
             type: DataTypes.ENUM('Summer', 'Autumn', 'Winter', 'Spring'),
             allowNull: true
+          },
+ time:{
+  type: DataTypes.ENUM("A.M.", "P.M."),
+  allowNull:true
+
+          },
+   details:{
+            type: DataTypes.STRING,
+            allowNull:true
           }
+    
+
+
   });
 };

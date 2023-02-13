@@ -20,11 +20,13 @@ router.post('/', async (req, res, next) => {
         difficulty,
         duration,
         season,
-        countries
+        countries,
+        time,
+        details
     } = req.body;
 
     try {
-        let activity = await Activity.create({ name, difficulty, duration, season })
+        let activity = await Activity.create({ name, difficulty, duration, season, time, details })
         await activity.setCountries(countries)
 
         let activityWithCountry = await Activity.findOne({

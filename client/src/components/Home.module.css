@@ -1,0 +1,28 @@
+.container{
+    width: auto;
+    height: auto;
+    background-color: rgb(198, 228, 228);
+    position: relative;
+}
+
+.nav{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content:center;
+}
+
+.card{
+    display:flex;
+    height: auto;
+    flex-direction: row-reverse;
+    justify-content:center;
+    background-color: rgba(207, 208, 227, 0.583);
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: absolute;
+    margin: 5px 10px 0px 10px ;
+    background-image: url("../IMG/1.jpg");
+}
+

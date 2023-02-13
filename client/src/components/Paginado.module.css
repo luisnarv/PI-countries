@@ -1,0 +1,34 @@
+.lista{border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(246, 242, 242, 0.05);
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 100px;
+    position: relative;
+    height: 40px;
+    left: 10px;
+    border: 100px 10px 10px 10px;
+    border:  none;
+}
+
+.number{
+    display: inline;
+color: antiquewhite;
+}
+.pagin{
+    /* -moz-border-bottom-colors: none;
+
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none; */
+    border-color:  #ddd2d2;
+    border-style: inset;
+    border-width: 1px 1px 1px 0;
+    float: left;
+    background-color: rgb(15, 16, 16);
+    line-height: 25px;
+    padding:  1px 20px 5px 20px;
+    text-decoration: none;
+    
+}
+
+

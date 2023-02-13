@@ -1,0 +1,105 @@
+.container{
+    background-color: rgb(12, 12, 11);
+    position: absolute;
+    background-image: url("../IMG/4.2.jpg");
+    margin: solid 10px;
+    height: 1150px;
+   top:-100px;
+    width: 1582px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container2{
+    background-color:  aqua;
+    margin: 150px 200px 10px 200px;
+    border-radius: 5%;
+    height: 800px;
+}
+
+.countri{
+    background-color: rgba(236, 227, 227, 0.128);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 500px;
+    top: 50px; 
+    left: 100px;
+    height: 600px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-around;
+    border-radius: 5%;
+    border: 5px solid rgba(1, 1, 22, 0.945);
+      font-family:Copperplate Gothic Light; 
+     /* font-family:Ink Free; */
+     /* cursor: url(../IMG/2.6.png), auto; */
+
+
+
+}
+
+
+.button {
+    position: relative;
+   width: 40px;
+   height:40px;
+    top: 10px; 
+    right: 550px;
+    box-shadow: 20px 15px 15px #15588fc3;
+}
+
+.button1 {
+    position: relative;
+   
+    border-radius: 50% 0px 50px 0px;
+    top: -10px; 
+    left: 0px;
+    border: 5px solid rgba(1, 1, 22, 0.945);
+    background-color: rgb(33, 205, 2);
+}
+
+.button2{
+    position: relative;
+   
+    border-radius: 0% 10px 25px 0px;
+    top: 20px; 
+    left: 0px;
+    margin: -0px 60px -50px 720px;    ;
+    border: 4.5px solid rgba(8, 8, 8, 0.945);
+    background-color: rgb(123 238 159);
+    font-family:Copperplate Gothic Light; 
+}
+
+
+
+
+.img{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 1px 10px 0px 0px;
+    border-radius: 10px 5px 0px 20px;
+    border: 5px solid rgba(1, 1, 22, 0.945);
+}
+
+.activity{
+    background-color: rgba(139, 236, 146, 0.882);
+    display: flex;
+    position:relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-around;
+    width: 350px;
+    top: -510px; 
+    left: 720px;
+    height: 300px;
+    margin: 10px 10px -1px 10px;
+    border-radius: 5%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-family:Ink Free;
+    border: 5px solid rgba(1, 1, 22, 0.945);
+}
+

@@ -13,6 +13,15 @@ import img4 from "../IMG/1.8.png";
     
     <div className={style.container} > 
     <div className={style.container2}> 
+
+    
+    
+    
+
+
+
+
+
     </div>
           <img className={style.img}  src={img}></img>
      <div>
@@ -24,11 +33,12 @@ import img4 from "../IMG/1.8.png";
 <img className={style.img4} src={img4}></img>
 
 
-<Link to="/Home"><img  className={style.img2} src={img2}></img>
-    <h1 className={style.texto}>Welcome to World</h1>
+<Link to="/Home"><img  className={style.img2 && style.o} src={img2}></img>
+
+    <h1 className={style.texto && style.p} >Welcome to World</h1>
      
      </Link>
-     <div className={style.text2}>
+     <div className={style.text2} >
 <p>Tecnologías utilizadas  </p>
 <p>React </p>
 <p>Redux  </p>

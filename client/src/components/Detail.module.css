@@ -3,10 +3,10 @@
     position: absolute;
     background-image: url("../IMG/4.2.jpg");
     margin: solid 10px;
-    height: 1150px;
+    height: 899px;
    top:-100px;
-    width: 1582px;
-    height: auto;
+    width: 1600px;
+    /* height: auto; */
     display: flex;
     flex-direction: column;
     bottom: -300px;
@@ -35,8 +35,9 @@
 .container2{
     background-color:  rgba(0, 255, 255, 0.451);
     margin: 150px 200px 10px 200px;
-    border-radius: 5%;
-    height: 800px;
+    border-radius: 4%;
+    height: 700px;
+    position: relative;
    
 }
 
@@ -117,7 +118,7 @@
     align-content: space-around;
     width: 350px;
     top: 10px; 
-    left: 50px;
+    left: 40px;
     height: 400px;
     margin: 10px 10px -1px 10px;
     border-radius: 5%;

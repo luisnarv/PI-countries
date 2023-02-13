@@ -210,7 +210,7 @@ function handleDetail(e){
                             </div>
 
                             <label>Details: </label> 
-<textarea  className={style.select} type="text" value={input.details} name="details" onChange={handleDetail} placeholder="Activity name..."></textarea>
+<textarea  className={style.select} type="text" value={input.details} name="details" onChange={handleDetail} placeholder="Detail activity..."></textarea>
 
                             <button className={style.button} type="submit">Add Activity</button>
                         </form>

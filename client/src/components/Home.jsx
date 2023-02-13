@@ -28,8 +28,13 @@ export default function Home(){
     const firstCountri = lastCountri - countriesPage 
     const currentCountries = allCountries.slice(firstCountri,lastCountri) //va a contener las countri de la pagina actual 
 
+    
+
+
     const paginado = (pageNumber)=>{
-        if(pageNumber === 1){setCountriesPage(9)}else{setCountriesPage(10)}
+         if(pageNumber === 1)
+            {setCountriesPage(9)}else{setCountriesPage(10)}
+            
         setCurrentPage(pageNumber)
     }
 
@@ -125,7 +130,7 @@ function handlePopulations(e) {
     {/* paginado con estados */}
      
        <Paginado
-countriesPage={countriesPage+1}
+countriesPage={countriesPage}
 allCountries = {allCountries.length}
 paginado = {paginado}
 /> 

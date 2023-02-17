@@ -1,36 +1,39 @@
 import axios from "axios";
 
 
-// const url = "http://localhost:3001/";
-
-// export function getCountries() {
-//     return async function (dispatch) {
-//         try {
-//             const res = await axios.get(`${url}countries`)
-//             return dispatch({
-//                 type: GET_COUNTRIES,
-//                 payload: res.data
-//             })
-//         } catch (error) {
-//             return dispatch({
-//                 type: FAILURE,
-//                 payload: error.response.data.msg
-//             })
-//         }
-//     }
-// }
-
-
+ const url = "http://localhost:3001/";
 
 export function GetCountries() {
     return async function (dispatch) {
-            var res = await axios.get("http://localhost:3001/countries");
+        try {
+            const res = await axios.get(`${url}countries`)
             return dispatch({
                 type: "GET_COUNTRIES",
-                payload:  res.data
+                payload: res.data 
+                
             })
+        } catch (error) {
+            return dispatch({
+                type: "FAILURE",
+                payload: error.response.data.msg 
+            
+            }
+            )
         }
     }
+}
+
+
+
+// export function GetCountries() {
+//     return async function (dispatch) {
+//             var res = await axios.get("http://localhost:3001/countries");
+//             return dispatch({
+//                 type: "GET_COUNTRIES",
+//                 payload:  res.data
+//             })
+//         }
+//     }
 
 
 //continentFilter
@@ -65,7 +68,8 @@ export function SearchCountry(name) {
             return dispatch({
                 type: "FAILURE",
                 payload: error.response.data.msg
-            })
+                && alert("Not Found")
+            }) 
         }
     }
 }

@@ -1,26 +1,39 @@
+.form1{
+
+position: absolute;
+width: 100%;
+height: 100%;
+ background: linear-gradient(blue, rgba(227, 233, 45, 0.582)); 
+
+}
+
 .form{
     position: relative;
-    background-color: rgb(38, 169, 209);
     display: flex;
     flex-direction: column;
-    padding:200px 100px 310px 10px ;
-    margin: -50px -30px 0px 0px;
+    margin: 5% 0% 1% 5%;
     font-family:Copperplate Gothic Light;
-    background-image: url(../IMG/5.1.jpg);
-    width: 1490px;
-    height: 336px;
+    font-size: 20px;
+    background-image: url(../IMG/5.jpg);
+     width: 90%;
+    height: 90%; 
+    border-radius: 20px;
 
 }
 
 .container{
-    
+    position: absolute;
     padding: 2%;
     background: rgba(0, 128, 0, 0.541);
-    border-radius: 3%;
-    margin: 10px 300px 10px 300px;
+    border-radius: 5%;
+         width: 60%;
+        bottom: 4%;
+        height: 60%; 
+        left: 1%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 0% 10% 0% 0%;
    
 }
 
@@ -29,8 +42,11 @@
     border-radius: 5px;
     border: 2px solid;
     position: relative;
-    left: 150px;
+    left: 25%;
     top: -18px;
+    height: 10%;
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .select2{
@@ -41,6 +57,70 @@
     position: relative;
     left: 300px;
     background-color: aqua;
-    border: 3px solid;
+    border: 1px solid;
     cursor: pointer;
+   
+}
+
+.radius{
+    position: absolute;
+    left: 3%;
+    height: 25px;
+    bottom: 80%;
+   /* border: 0px solid; */
+   background-color: rgba(237, 8, 8, 0.656);
+    cursor: pointer;
+    
+}
+.lista{
+    display: flex;
+    
+}
+
+
+
+.text{
+    position: absolute;
+    bottom: 70%;
+    color: aliceblue;
+    right: 61%;
+}
+.img1{
+    left: 80%;
+    position: relative;
+    top: 4%;
+    width: 15%;
+    border: 5px solid;
+    border-radius: 5%;
+}
+.img2{
+    left: 80%;
+    position: relative;
+    top: 7%;
+    width: 15%;
+    border: 5px solid;
+    border-radius: 5%;
+  
+}
+.img3{
+    left: 80%;
+    position: relative;
+    top:  9%;
+    width: 15%;
+    border-radius: 5%;
+    border: 5px solid;
+}
+.img4{
+
+    left: 80%;
+    position: relative;
+    top:  12%;
+    width: 15%;
+    border: 5px solid;
+    border-radius: 5%;
+}
+
+.error {
+ color: rgb(255, 12, 12);
+ font-size: 20px;
 }

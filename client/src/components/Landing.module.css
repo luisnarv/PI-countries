@@ -1,6 +1,6 @@
 .container{
  width: 1000px;
- position: relative;
+ position: absolute;
 
 }
 .container2{
@@ -20,43 +20,56 @@
   right: 0px;
 }
 .img2{
-  width: 100% ; 
   position:absolute;
-  left: 200px;
-  top: 350px;
-  border-radius: 10%;
-  width: 300px;
-  overflow: hidden;
-  cursor: url("../IMG/1.9.png"), auto;
-}
-.o {
-  animation-duration: 8s;
+  /* bottom: 200px; */
+width: 100%; 
+top: 222px;
+left: 100px;
+  animation-duration: 5s;
   animation-name: plane;
-  right: 200px;
-  position: absolute;
-  animation-direction: reverse;
-  animation-iteration-count:infinite;
-  animation-fill-mode:both;
-  cursor: url("../IMG/1.9.png"), auto;  
-
+  animation-direction:initial;
+  animation-iteration-count:1;
+ /* animation-timing-function: cubic-bezier(10.2,5,5.8,2); */
+ /* animation-timing-function:cubic-bezier(0.2,-5,5.0,5); */
+ animation-timing-function: linear;
+  cursor: url("../IMG/9.1.png"), auto;  
 }
+
 
 @keyframes plane {
+
   from {
-    /* margin-right: 10%;
-    width: 50% */
-    margin-left: 0%;
-    width: 0%;
-
-
+  width: 0%;
+  top :200px;
+   
   }
 
+  15% { 
+    top: 300px;
+    /* animation-timing-function:cubic-bezier(10.175, 5.885, 2.32, 9.275); */
+  }
+   35% {
+    top: 280px;
+  
+  }  
+   55% {
+    
+    top: 270px;
+   
+  } 
+  100% {
+   width: 100%;
+    top: 220px;
+     animation-timing-function: linear; 
+    
+  }
+   
   to {
-    /* margin-left: 700%;
-    width: 0%; */
-     margin-right: 10%;
-    width: 50% 
+
+  
   }
+
+
 }
 
 
@@ -101,19 +114,9 @@
     
 } 
 
-.texto{
-  position: absolute;
- left: 650px;
-   
-  font-family:Abadi MT Condensed Light;
-}
-
-.img::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
 
 
-.p {
+.u {
   animation-duration: 3s;
   animation-name: slidein;
   bottom: 500px ;
@@ -121,17 +124,6 @@
 
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 
 
 .text2{
@@ -140,7 +132,7 @@
   flex-direction: row;
   background-color: aqua;
   left: 900px;
-  top: 60px;
+  top: 170px;
   width: 600px;
   border-radius: 5px;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
@@ -150,7 +142,7 @@
 }
 
 
-.text2 {
+.text3 {
   animation-duration: 3s;
   animation-name: pd;
  

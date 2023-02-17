@@ -1,0 +1,126 @@
+
+@media (max-width: 768px) {
+
+    .form1{
+        background-color: rgba(191, 195, 173, 0.387);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        
+    }
+.form{
+    position: relative;
+    display: flex;
+    font-size: 17px;
+        flex-direction: column;
+    font-family:Copperplate Gothic Light;
+    background-image: url(../IMG/5.1.jpg);
+     width: 90%;
+    height: 90%; 
+    
+    border-radius: 5px;
+   
+
+}
+
+.container{
+    position: relative;
+ 
+    background: #bcc83445;
+    border-radius: 3%;
+    top: -100px;
+         width: 80%;
+        height: 90%; 
+        left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+   
+}
+
+.select{
+    background-color: rgba(227, 237, 227, 0.261);
+    border-radius: 5px;
+    border: 2px solid;
+    position: relative;
+    max-width: 130px;
+    left: 150px;
+    top: -18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.select2{
+
+    right: 50px;
+}
+.button{
+    position: relative;
+    top: -250px;
+    left: 50px;
+    background-color: rgb(205, 210, 206);
+    border: 1px solid;
+    box-shadow: 10px 10px 10px 2px #000000d3;
+    cursor: pointer;
+   
+}
+
+.radius{
+    position: relative;
+    left: 200px;
+    top: -200px;
+    
+   border: 0px solid;
+   background-color: rgba(219, 58, 9, 0.719);
+    cursor: pointer;
+}
+.lista{
+    display: flex;
+    
+}
+
+
+.text{
+    position: relative;
+    left: 70px;
+    top: -100px;
+    font-size: 25px;
+    color: rgb(19, 19, 19);
+}
+.img1{
+    left: 48%;
+    position: relative;
+    top: 83.17%;
+    width: 15%;
+    border: 5px solid;
+    border-radius: 5%;
+}
+.img2{
+    left: 24%;
+    position: relative;
+    top: 75%;
+    width: 17%;
+    border: 5px solid;
+    border-radius: 5%;
+  
+}
+.img3{
+    left: 4%;
+    position: relative;
+    top: 67%;
+    width: 16%;
+    border-radius: 5%;
+    border: 5px solid;
+}
+.img4{
+
+    left: 70%;
+    position: relative;
+    top:  59%;
+    width: 15%;
+    border: 5px solid;
+    border-radius: 5%;
+}
+
+}

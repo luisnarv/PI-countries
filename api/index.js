@@ -42,7 +42,6 @@ conn.sync({ force: true }).then(() => {
       }
     })
         await Country.bulkCreate(apiCountries);
-        console.log('creado')
   }
    
     console.log('%s listening at 3001'); // eslint-disable-line no-console
@@ -53,17 +52,4 @@ conn.sync({ force: true }).then(() => {
 
 
 
- // const getallcountry = await axios.get("https://restcountries.com/v3/all");
-    // const datacountry = await getallcountry.data.map(e =>{
-    //   return {
-    //     id: e.cca3,
-    //     name: e.name.common,
-    //     image: e.flags[0],
-    //     continent: e.continents[0],
-    //     capital: e.capital ? e.capital[0] : 'Not found',
-    //     subregion: e.subregion,
-    //     Area: e.area,
-    //     Population: e.population
-    //   }
-    // });
-    // return datacountry;
+ 

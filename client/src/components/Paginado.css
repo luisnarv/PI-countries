@@ -1,0 +1,34 @@
+
+@media (max-width: 768px) {
+    
+    .lista{
+        display: inline-block;
+        position:sticky;
+flex-wrap: wrap;
+        cursor: pointer;
+    }
+
+
+    .number{
+        display: inline;
+    color: rgb(17, 16, 16);
+    }
+
+    
+    .pagin{
+         
+        border-color:  #131212;
+      
+     
+        float: left;
+        background-color: rgb(211, 187, 187);
+        /* line-height: 10px; */
+      width: 30%;
+      height: 50%;
+        margin: 1%;
+       
+        
+    }
+
+
+} 

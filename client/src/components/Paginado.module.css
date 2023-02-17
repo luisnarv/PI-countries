@@ -1,28 +1,27 @@
 .lista{
-    box-shadow: 0 1px 2px rgba(200, 196, 196, 0.918);
+ 
     display: inline-block;
     position: relative;
-    border:  none;
+   
     cursor: pointer;
+width: 90%;
 }
 
 .number{
     display: inline;
 color: antiquewhite;
+font-size: 90%;
 }
-.pagin{
-     -moz-border-bottom-colors: none;
 
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none; 
+
+.pagin{
     border-color:  #ddd2d2;
     border-style: inset;
-    border-width: 1px 1px 1px 0;
-    float: left;
+ 
+    float:left;
     background-color: rgb(0, 0, 0);
     line-height: 25px;
-    padding:  1px 20px 5px 20px;
+    padding: 0% 1% 0% 1%;
     text-decoration: none;
     
 }

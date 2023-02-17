@@ -1,4 +1,5 @@
 .container{
+  
     flex-wrap: wrap; 
     display: flex;
     flex-direction: column;
@@ -8,7 +9,7 @@
     border-radius: 6px ;
     background-color: rgba(195, 225, 234, 0.693);
     height:280px;
-    width:270px ;
+    width:270px ; 
    
     border-color: rgb(58, 58, 55);
    
@@ -16,22 +17,26 @@
 
      border-style:  inset;
      border-right-style: inset;
-     box-shadow: 10px 10px 10px #2e08966f;
-
-     cursor: url(../IMG/2.2.png), auto;
+     box-shadow: 10px 10px 10px;
+border-radius: 25px ;
+     cursor: url(../IMG/9.2.png), auto; 
+       max-width: 100%; 
 }
 .img{
     position: relative;
-    height: 90%;
-    width: 170px;
-    
+    height: 70%;
+    width: 40%;
     border: 4px solid rgba(8, 8, 13, 0.945);
     box-shadow: 30px 7px 10px 3px;
     border-radius: 10px 5px 0px 20px;
+
+    max-width: 60%;
     }
 
 .text{
+    position: relative;
     font-family: serif;
     font-size: 12px;
-    margin: -10px 10px -1px 10px;
+     margin: 1% 2% 1% 1%; 
+    max-width: 90%;
 }

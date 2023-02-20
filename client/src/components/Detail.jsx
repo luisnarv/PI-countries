@@ -30,7 +30,7 @@ const activities = detail.activities?.map(e => {
     }
   
 })
-let contador = 1
+let contador= 1;
  
 
 return (
@@ -59,6 +59,9 @@ return (
                <p>Subregion: {countrys.subregion}</p>
                <p>Area: {countrys.area}</p>
                <p>Population: {countrys.population}</p>
+               <p className={style.time}>timezone: {countrys.timezones}</p>
+               <p>latlng:  {countrys.latlng}</p>
+
              </div>
 //Si el resultado de la evaluación es verdadero, se ejecutará la primera parte de la expresión:
              :  <p>LOADING....</p>
@@ -71,8 +74,8 @@ return (
                                         
                                             
                                             <div className={`${style.activity}`} key={e.id}>
-                                                 <br />
-                                                <br />
+                                                 <br /><br />
+                                                
                                                 <h1>ACTIVITIES {contador ++}</h1>
                                                 <p>Name: {e.name}</p>
                                                 <p>Difficulty: {e.difficulty}</p>
@@ -80,13 +83,13 @@ return (
                                                 <p>Season: {e.season}</p>
                                                 <p>Time: {e.time}</p>
                                                 <p>Details: {e.details}</p>
-                                                <br />
-                                                <br />
+                                                <br /><br />
+                                                
                                             </div>
                                         
                                         )
                                     })
-                                        : <p className={`${style.activity}`}>LOADING....</p>}
+                                        : <p className={`${style.activity}`}>Not a have activity....</p>}
 
 </div>
 </div>

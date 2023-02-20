@@ -7,20 +7,16 @@ import { Link } from "react-router-dom";
 import Paginado from "./Paginado";
 import style from "./Home.module.css";
 import img from "../IMG/9.4.png";
-import "./Home.css"
-
 
 
 
 
 export default function Home(){
 
-
-
-    
+    const [searchValue, setSearchValuetName] = useState("")
     const [order, setOrder] = useState('');
     const dispatch = useDispatch()
-    
+   
     const allCountries = useSelector((state) => state.countries)
     //{ estados globales 
     const [currentPage,setCurrentPage] = useState(1) //estado con la página actual y un estado que
@@ -28,6 +24,7 @@ export default function Home(){
     
     const [countriesPage, setCountriesPage] = useState(10) // va a setear las country por pagina 10xpagina
  
+
     //}fin de estados 
     const lastCountri = currentPage * countriesPage 
     const firstCountri = lastCountri - countriesPage 
@@ -38,28 +35,23 @@ export default function Home(){
 
     const paginado = (pageNumber)=>{
           if(pageNumber === 1)
-        {setCountriesPage(9)}else{setCountriesPage(10)}
-            
+        {setCountriesPage(9)}else{setCountriesPage(10)}     
         setCurrentPage(pageNumber)
     }
 
-
-
-
+function setcurrent(){setCurrentPage(1)}
 
     useEffect(()=>{
         dispatch(GetCountries());
         // dispatch(filContinent())
     },[dispatch])
 
+
+
 function handleClick(e){
     e.preventDefault();
     dispatch(GetCountries());
 }
-
-
-
-
 function handlePopulations(e) {
    //e.preventDefault();
     dispatch(filPopulation(e.target.value))
@@ -70,6 +62,7 @@ function handlePopulations(e) {
        //e.preventDefault();
         dispatch(filContinent(e.target.value))
         setOrder(e.target.value)
+        setcurrent()
     }
 
     function handleAZ(e) {
@@ -78,13 +71,13 @@ function handlePopulations(e) {
         setOrder(e.target.value)
     }
 
-
-    const [searchValue, setSearchValuetName] = useState("")
     
     function handleInputChange(e){
         e.preventDefault();
         setSearchValuetName(e.target.value);
         dispatch(SearchCountry(e.target.value))
+       // setCurrentPage(1);
+        setcurrent()
     }
 
 
@@ -93,36 +86,35 @@ function handlePopulations(e) {
         e.preventDefault();
         dispatch(SearchCountry(searchValue));
         setSearchValuetName("");
-        setCurrentPage(1);
+        //setCurrentPage(1);
+        
     }
     
 
 //    function handleSearch(e) {     
-//        dispatch(SearchCountry(e.target.value))
-       
-     
+//        dispatch(SearchCountry(e.target.value))        
 //   }
     
 
-
-
  return (
+    
  <div className={style.container}>
 
-    
+
             
-            <h1 className={style.txt}>Api Countries</h1> 
+            <h1 setcurrent className={style.txt}>Api Countries</h1> 
      <div>
           <div className={`nav && ${style.nav} `}>
-                <Link to= "/Activity">
-                     <button className={`button && ${style.button}`}>Crear actividad</button>                                                       
-                     </Link>
-                         <input className={ `search && ${style.search}`}type='text'  value={searchValue} placeholder="Search country ...   🔍"    onChange={(e)=>  {handleInputChange(e)}} />
-                          <button  type="submit"  onClick={(e) => handleSubmit(e)} > buscar</button>
-                                                                                                                                                        {/* {handleInputChange(e)};  */}
-                               <button className={`button5 && ${style.button5}`} onClick={e=>{handleClick(e)}}>Clean filters 🧹</button>
+             <Link to= "/Activity">
+                <button className={`button && ${style.button}`}>Crear actividad</button>                                                       
+             </Link>
+             <input className={ `search && ${style.search}`}type='text'  value={searchValue} placeholder="Search country ...   "    onChange={(e)=>  {handleInputChange(e)}} />
+            <button className={style.button6}  type="submit"  onClick={(e) => handleSubmit(e)} >buscar              🔍</button>
+                                                                                                                                                         {/* {handleInputChange(e)};  */}
+         
+          <button className={` ${style.button5}`} onClick={e=>{handleClick(e)}}>Clean filters    🧹</button>
 
-                   <div>
+                  <div>
                        <select className={`button2 && ${style.button2}`} onChange={e=> handleContinents(e)}>
                         <option value='All' key='All'>All continents</option>
                         <option value='Africa' key='Africa'>Africa</option>
@@ -149,7 +141,7 @@ function handlePopulations(e) {
                         <option value='AZ' key='AZ'>A-Z</option>
                         <option value='ZA' key='ZA'>Z-A</option>
                     </select>
-                </div>
+                </div> 
     
        
        </div>
@@ -157,9 +149,10 @@ function handlePopulations(e) {
        <Link to={"/"}>
 <img className={`home && ${style.home}`} src={img} alt="" />
      </Link>  <div >
+
+
     {/* paginado con estados */}
-     
-       <Paginado
+       <Paginado className={style.pag}
 countriesPage={countriesPage}
 allCountries = {allCountries.length}
 paginado = {paginado}
@@ -174,11 +167,12 @@ paginado = {paginado}
                  currentCountries?.map( (c)=> {
                         return(
                             <div >
-                                <div>
+                                <div >
                             <Link to={"/countries/" + c.id}>
 
-                        <Card  name= {c.name} image= {c.image} continent={c.continent}/>
+                        <Card className={style.text} name= {c.name}  image= {c.image} continent={c.continent}/>
                         </Link>
+                       
                         </div>
                         </div>
                         );

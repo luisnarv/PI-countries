@@ -35,6 +35,9 @@ router.get('/:id', async (req, res, next) => {
                 subregion: countries.subregion,
                 area: countries.area,
                 population: countries.population,
+                latlng:countries.latlng,
+                timezones:countries.timezones,
+               
                 activities: countries.activities.map((e) => {
                     return {
                         id: e.id,

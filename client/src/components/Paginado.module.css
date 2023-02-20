@@ -4,7 +4,8 @@
     position: relative;
    
     cursor: pointer;
-width: 90%;
+width: 100%;
+
 }
 
 .number{
@@ -18,12 +19,36 @@ font-size: 90%;
     border-color:  #ddd2d2;
     border-style: inset;
  
-    float:left;
+
     background-color: rgb(0, 0, 0);
     line-height: 25px;
     padding: 0% 1% 0% 1%;
     text-decoration: none;
+
+
     
 }
 
+
+
+@media screen and (max-width: 450px) {
+
+    .pagin{
+        border-color:  #ddd2d2;
+        border-style: inset;
+     
+        background-color: rgb(0, 0, 0);
+        line-height: 19px;
+        width: 10px;
+        padding: 2% 12% 1% 2%;
+        text-decoration: none;
+        display: inline-grid;
+    }
+    .lista{
+        display: inline-block;
+        width: 100%;
+        top: 150px;
+        right: 50px;
+    }
+}
 

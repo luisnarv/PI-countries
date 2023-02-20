@@ -1,0 +1,118 @@
+.navbar{
+    background:#ff8d01;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+.nav_logo{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+    color: white;
+}
+.nav_items a{
+    margin: 15px;
+    color: rgb(5, 5, 5);
+    position: relative;
+    text-decoration: none;
+}
+.nav_toggle{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav_items{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(255, 128, 0);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: -webkit-fill-available;        
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+    }
+    .nav_items.open{
+        transform: translateX(0) !important
+    }
+    .nav_toggle{
+        display: flex !important;
+        flex-direction: column;                
+        margin: 15px;
+    }
+    .nav_toggle span{
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin-bottom: 5px;
+        border-radius: 2px;             
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+    .nav_toggle.open > span{
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+    .nav_toggle.open > span:nth-child(2){
+        display: none;
+    }
+    .nav_toggle.open > span:nth-child(3){
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
+}
+
+
+.button{
+    left: 1200px;
+    top: 58px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(232, 254, 62);
+    border: 3px solid;
+    border-radius: 10px 1px 10px 0px;
+}
+
+.button2{position: relative;
+    left: 20px;
+    top: 10px; 
+    background-color: rgb(162, 212, 96);
+    border: 3px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button3{
+    position: relative;
+    background-color: rgb(162, 212, 96);
+    border: 3px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    top: 34px;
+    left: 200px;
+}
+
+.button4{
+    position: relative;
+    left: 550px;
+    bottom: 40px;
+    background-color: rgba(162, 212, 96, 0.815);
+    border: 3px solid;
+    border-radius: 5%;
+    cursor: pointer;
+
+}
+
+.button5{
+    position: relative;
+    left: 400px;
+    top: -14px;
+    background-color: rgb(162, 212, 96);
+    border: 3px solid;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+

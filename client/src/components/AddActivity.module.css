@@ -18,8 +18,37 @@ height: 100%;
      width: 90%;
     height: 90%; 
     border-radius: 20px;
-
 }
+@media screen and (max-width: 700px) {
+
+ /* .form{animation: cambiarImagenes 20s infinite;
+   background-image: url(../IMG/5.jpg); }
+    
+
+    @keyframes cambiarImagenes {
+        0% {
+          background-image: url("../IMG/winter.jpg");
+          width: 90%;
+          height: 90%;
+        }
+        50% {
+          background-image: url("../IMG/sum.jpg");
+          width: 90%;
+          height: 100%;
+        }100%{
+            background-image: url("../IMG/autum.jpg");
+          width: 90%;
+          height: 100%;
+        }
+        150% {
+          background-image: url("../IMG/spring.jpg");
+          width: 90%;
+          height: 100%;
+        }
+      } */
+}
+
+
 
 .container{
     position: absolute;
@@ -34,8 +63,8 @@ height: 100%;
     flex-direction: column;
     align-items: flex-start;
     margin: 0% 10% 0% 0%;
-   
 }
+
 
 .select{
     background-color: rgb(202, 222, 202);
@@ -70,8 +99,9 @@ height: 100%;
    /* border: 0px solid; */
    background-color: rgba(237, 8, 8, 0.656);
     cursor: pointer;
-    
 }
+
+
 .lista{
     display: flex;
     
@@ -85,6 +115,8 @@ height: 100%;
     color: aliceblue;
     right: 61%;
 }
+
+
 .img1{
     left: 80%;
     position: relative;
@@ -123,4 +155,136 @@ height: 100%;
 .error {
  color: rgb(255, 12, 12);
  font-size: 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90%;
+        bottom: 1%;
+        height: 70%; 
+        left: 4%;
+  }
+  .img1{
+    display: none;
+}
+.img2{
+display: none;
+}
+.img3{
+display: none;
+}
+.img4{
+display: none;
+}
+.text {
+    bottom: 80%;
+    right: 50%;
+}
+.radius {
+    bottom: 90%;  
+}
+.form{animation: cambiarImagenes 20s infinite;
+    background-image: url(../IMG/5.jpg); }
+     
+ 
+     @keyframes cambiarImagenes {
+         0% {
+           background-image: url("../IMG/winter.jpg");
+           width: 90%;
+           height: 90%;
+         }
+         50% {
+           background-image: url("../IMG/sum.jpg");
+           width: 90%;
+           height: 100%;
+         }100%{
+             background-image: url("../IMG/autum.jpg");
+           width: 90%;
+           height: 100%;
+         }
+         150% {
+           background-image: url("../IMG/spring.jpg");
+           width: 90%;
+           height: 100%;
+         }
+       }
+}
+
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 97%;
+        top: 110%;
+        height: 400px; 
+        left: 0%;
+        background-color: rgba(235, 243, 240, 0.935);
+  }
+
+  .select{
+    left: 1%;
+    top: -0px;
+    height: 5%;
+    width: 50%;
+  }
+
+.img1{
+    display: none;
+}
+.img2{
+display: none;
+}
+.img3{
+display: none;
+}
+.img4{
+display: none;
+}
+
+.text {
+    bottom: 25%;
+    right: 30%;
+}
+.radius {
+    bottom: 70%;  
+}
+.button{
+    position: relative;
+    left: 100px;
+    top: 3%;
+    background-color: aqua;
+    border: 1px solid;
+    cursor: pointer;
+   
+}
+
+.form{animation: cambiarImagenes 20s infinite;
+    background-image: url(../IMG/5.jpg); }
+     
+ 
+     @keyframes cambiarImagenes {
+         0% {
+           background-image: url("../IMG/winter.jpg");
+           width: 90%;
+           height: 30%;
+         }
+         50% {
+           background-image: url("../IMG/sum.jpg");
+           width: 90%;
+           height: 30%;
+         }100%{
+             background-image: url("../IMG/autum.jpg");
+           width: 90%;
+           height: 30%;
+         }
+         150% {
+           background-image: url("../IMG/spring.jpg");
+           width: 90%;
+           height: 30%;
+         }
+       }
 }

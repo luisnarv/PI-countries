@@ -34,7 +34,10 @@ conn.sync({ force: true }).then(() => {
         id: e.cca3,
         name: e.name.common,
         image: e.flags[0],
+        latlng:e.latlng,
         continent: e.continents[0],
+        timezones:e.timezones,
+      
         capital: e.capital ? e.capital[0] : 'Not found',
         subregion: e.subregion,
         area: e.area,

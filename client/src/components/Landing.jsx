@@ -5,39 +5,32 @@ import img from "../IMG/1.jpg";
 import img2 from "../IMG/9.png";
 import img3 from "../IMG/1.3.jpg";
 import img4 from "../IMG/1.8.png";
-import "./landing.css"
-
+import son from "../audio/1.mp3"
  function Landing() {
+
+  const audio = new Audio(son);
+  audio.play();
 
   return (
     
-    <div className={`container && ${style.container} `} > 
-    <div className={`container2 && ${style.container2} `}> 
-
-    
-    
-    
-
-
-
-
-
-    </div>
-          <img className={`img && ${style.img}`}  src={img} alt="img"></img>
-     <div>
+    <div className={`${style.container} `} > 
+    <audio className={style.au} id="1" src={son} controls autoPlay></audio>
+   
+          {/* <img className={` ${style.img}`}  src={img} alt="img"></img> */}
+     
      
         
-          <img className={`img3 && ${style.img3}`} src={img3} alt="img3" ></img>
+                <img className={`${style.img3}`} src={img3} alt="img3" ></img> 
           
  
 
-<img className={`img4 && ${style.img4}`} src={img4} alt="img4"></img>
+{/* <img className={` ${style.img4}`} src={img4} alt="img4"></img> */}
 
 
-<Link to="/Home"><img  className={`img2 && ${style.img2}`} src={img2}  alt="img2"></img>
+<Link to="/Home"><img  className={`${style.img2}`} src={img2}  alt="img2"></img>
      
      </Link>
-     <div className={`text2 && ${style.text2}`} >
+      <div className={`${style.text2}`} >
 <p>Tecnologías utilizadas  </p>
 <p>React </p>
 <p>Redux  </p>
@@ -45,11 +38,11 @@ import "./landing.css"
 <p>PostgreSQL </p>
 <p>Nodejs  </p>
 <p>Css  </p>
-</div>
+</div> 
    
 
 
-      </div>
+      
     </div>
   );
 }

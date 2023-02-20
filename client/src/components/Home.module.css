@@ -3,8 +3,7 @@
     height: 1400px default;
     position: relative;
     background-image: url("../IMG/9.6.jpg");
-    padding: 40px;
-    
+    padding: 40px; 
 }
 
 .nav{
@@ -16,58 +15,70 @@
 }
 
 
+.pag{
+  position: relative;
+  left: 100px;
+  right: 100px;
+}
 
 .home{
-    position:relative;
-    width: 100px;
-   /* top: 130px;*/
-  right: 600px;  
+  position: relative;
+  width: 9%;
+  /* top: 130px; */
+  right: 45%;
   animation-name: salto;
-  animation-duration: 5s;
-  animation-direction:initial;
-  animation-iteration-count:infinite;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 10s;
+  animation-direction: initial;
+  animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); 
 }
 
 @keyframes salto {
     from {
-        top: 2px;
-        animation-timing-function: ease-out;
+        top: 40px;
+        animation-timing-function: ease-out; 
       }
     
-      25% {
-        top: -100px;
-        animation-timing-function: ease-in;
+       25% {
+        top: -50px;
+         animation-timing-function: ease-in; 
       }
-    
+
       50% {
-        top: 2px;
-        animation-timing-function: ease-out;
+        top: 70px;
+         animation-timing-function: ease-out; 
       }
-    
-      75% {top: -100px;
+      
+      75% {top: -20px;
        
-        animation-timing-function: ease-in;
+        animation-timing-function: ease-in; 
       }
+
+      90% {top: 100px;
+        
+        animation-timing-function: ease-out; 
+      }  
+      100% {top: -250px;
+       
+        animation-timing-function: ease-out; 
+      } 
     
       to {
-        top: 2px;
-      }
-    
+        top: 60px;
+      } 
     
 }
 
+
 .card{
-   
     width: 80%;
-    right: 2.5%;
-    height: 500px;
+    height: 450px;
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    margin: 2% 1% 0% 10%;
+    margin: 2% 1% 0% 12%;
     border-radius: 50px;
 background-color: rgba(55, 85, 111, 0.351);
 overflow: auto;
@@ -78,6 +89,9 @@ overflow: auto;
 }
 
 
+
+
+
 .txt{
     top: 10px;
     position: relative;
@@ -85,15 +99,14 @@ overflow: auto;
 
 
 .button{
-
-    
     right: 150px;
     cursor: pointer;
     position: relative;
-background-color: rgb(232, 254, 62);
+    background-color: rgb(232, 254, 62);
     border: 3px solid;
     border-radius: 10px 1px 10px 0px;
 }
+
 
 .button2{
   position: relative;
@@ -116,9 +129,9 @@ background-color: rgb(232, 254, 62);
 .button4{
   position: relative;
     right: 130px;
-    background-color: rgb(162, 212, 96);
+    background-color: rgba(162, 212, 96, 0.815);
     border: 3px solid;
-    border-radius: 50%;
+    border-radius: 5%;
     cursor: pointer;
 
 }
@@ -132,11 +145,189 @@ background-color: rgb(232, 254, 62);
     cursor: pointer;
 }
 
-
+.button6{
+  color: blue;
+}
 
 .search{
     position: relative;
     right: 1000px;
     border: 3px solid;
     background-color: rgb(122, 206, 77);
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  .button{
+   background-color: rgba(0, 0, 0, 0.197);
+position: relative;
+  right: 10%;
+  border-radius: 5px;
+  color: aqua;
+
+  }
+  .button2{
+   
+    left: 122px;
+    bottom: 10px;
+    background-color: rgb(30, 32, 29);
+    border: 3px solid;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button3{
+    left: 240px;
+    bottom: 40px;
+    background-color: rgb(30, 32, 29);
+  }
+
+  .button4{
+    position: relative;
+    left: 320px;
+    top: 17px;
+    background-color: rgb(30, 32, 29);
+    border-radius:0%;
+  }
+
+  .button5{
+    position: absolute;
+   left: 100px;
+   right: 100px;
+   top: 22%; 
+   border-radius: 0%;
+    background-color: rgb(30, 32, 29);
+  }
+
+  .button6{
+    display: none;
+  }
+
+  .search{
+    right: 50%;
+    bottom: 120px;
+  }
+  .txt{
+    top: -15px;
+    animation: cambiar 10s infinite;
+  }
+
+
+  @keyframes cambiar {
+    0% {
+      color: rgba(78, 93, 106, 0.6);
+    }
+    50% {
+      color: rgb(13, 120, 213);
+    }
+    100% {
+      color: rgba(23, 194, 49, 0.582);
+    }
+  }
+  
+}
+
+
+
+@media screen and (max-width: 450px) {
+  .button{
+    background-color: rgb(237, 225, 1);
+    position: absolute;
+    right: 27%;
+    left: 20%;
+    top: 9%;
+    /* position: relative; */
+    /* right: 10%; */
+    /* border-radius: 5px; */
+    color: aqua;
+  }
+  .button2{
+    left: 35%;
+    right: 27%;
+    position: absolute;
+    top: 18.3%;
+    bottom: 79%;
+    background-color: rgb(30, 32, 29);
+    /* border: 3px solid; */
+    /* border-radius: 5px; */
+    /* cursor: point*/
+  }
+  .button3{
+    left: 30%;
+    bottom: 82%;
+    position: absolute;
+    top: 15.2%;
+    background-color: rgb(30, 32, 29);
+  }
+
+  .button4{
+    position: absolute;
+    left: 60%;
+    top: 21.2%;
+    right: 27%;
+    border-radius: 5%;
+       background-color: rgb(30, 32, 29);
+       /* border-radius: 0%;*/
+  }
+
+  .button5{
+    top: 12%;
+    bottom: 85%;
+    left: 25%;
+    border-radius: 5%;
+   /* position: absolute;
+   right: 100px;
+   border-radius: 0%; */
+    background-color: rgb(30, 32, 29);
+  }
+
+  .button6{
+    display: none;
+  }
+
+  .search{
+    right: 27%;
+    position: absolute;
+    top: 5.5%;
+    bottom: 91.6%;
+  }
+  .txt{
+    position: absolute;
+  
+    left: 20%;
+    animation: cambiar 10s infinite;
+  }
+
+  .card{
+    width: 100%;
+    height: 400px;
+/*    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
+    
+    margin: 80% 0% 0% 1%;
+    border-radius: 5px;
+   
+    overflow: auto;
+  }
+
+  
+
+
+  @keyframes cambiar {
+    0% {
+      color: rgba(78, 93, 106, 0.6);
+    }
+    50% {
+      color: rgb(13, 120, 213);
+    }
+    100% {
+      color: rgba(23, 194, 49, 0.582);
+    }
+  }
+  
 }

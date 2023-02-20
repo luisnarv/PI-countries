@@ -30,57 +30,83 @@ function rootReducer (state= initialState, action){
                     countries: statusFil
                 }
 //  "FILTER_POPULATION" 
-             case "FILTER_POPULATION" :
-            const allPopulation = state.allPopulation
-            const statusPo = action.payload === 'Min' ?   
-           // action.payload === 'Min' ?
-           allPopulation.sort(function (a, b) {
-                    if (a.population > b.population) {
-                        return 1;
-                    }
-                    if (b.population > a.population) {
-                        return -1;
-                    }
-                    return 0;
-                }) :
-                allPopulation.sort(function (a, b) {
-                    if (a.population > b.population) {
-                        return -1;
-                    }
-                    if (b.population > a.population) {
-                        return 1;
-                    }
-                    return 0;
-                })
-            return {
-                ...state,
-                countries: statusPo
-            }
+        //     case "FILTER_POPULATION" :
+        //     const allPopulation = state.allPopulation
+        //     const statusPo = action.payload === 'Min'  ?
+        //    // action.payload === 'Min' ?
+        //    allPopulation.sort(function (a, b) {
+        //             if (a.population > b.population) {
+        //                 return 1;
+        //             }
+        //             if (b.population > a.population) {
+        //                 return -1;
+        //             }
+        //             return 0;
+        //         }) 
+        //          : 
+        //         allPopulation.sort(function (a, b) {
+        //             if (a.population > b.population) {
+        //                 return -1;
+        //             }
+        //             if (b.population > a.population) {
+        //                 return 1;
+        //             }
+        //             return 0;
+        //         })
+        //     return {
+        //         ...state,
+        //         countries: statusPo
+        //     }
+
+
+            case "FILTER_POPULATION":
+                const allPopulation =[...state.countries] //(function (a, b){
+
+                action.payload === 'Min'  ?
+
+
+
+               // action.payload === 'Min' ?
+               allPopulation.sort(function (a, b) {
+                        if (a.population > b.population) {
+                            return 1;
+                        }
+                        if (b.population > a.population) {
+                            return -1;
+                        }
+                        return 0;
+                    }) 
+                     : 
+                    allPopulation.sort(function (a, b) {
+                        if (a.population > b.population) {
+                            return -1;
+                        }
+                        if (b.population > a.population) {
+                            return 1;
+                        }
+                        return 0;
+                    })
+               // })
+                return {
+                    ...state,
+                    countries: allPopulation
+                }
+
  // FILTER_AZ
           case "FILTER_AZ":
-            const orderCountries = action.payload === 'AZ' ?
-                state.countries.sort(function (a, b) {
-                    if (a.name > b.name) {
-                        return 1;
-                    }
-                    if (b.name > a.name) {
-                        return -1
-                    }
-                    return 0;
-                }) :
-                state.countries.sort(function (a, b) {
-                    if (a.name > b.name) {
-                        return -1;
-                    }
-                    if (b.name > a.name) {
-                        return 1;
-                    }
-                    return 0;
-                })
+            const filter = [...state.countries].sort (function (a, b){
+            if(action.payload === 'AZ') {
+        return a.name.localeCompare(b.name)
+    } else if (action.payload === 'ZA') {return b.name.localeCompare(a.name);
+        } else { return 0;}
+                });
             return {
                 ...state,
-                countries: orderCountries
+                countries: filter
             }
+
+
+
 
  //SearCountry 
             case "SearCountry":

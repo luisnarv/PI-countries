@@ -1,108 +1,159 @@
 .container{
- width: 1000px;
+ width: 100%;
  position: absolute;
+ background-color: #0a0a0a;
+ 
+  width: 100%;
+  height: 100%;
+  background-image: url('../IMG/nubes1.jpg');
+  background-size: cover;
+
+  animation: cambiarImagenes 10s infinite;
 
 }
-.container2{
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
+
+
+.au{
+  position: relative;
+  width: 15%;
+  height: 20px;
+  right: 25%;
+  bottom: 10%;
+}
+.au::-webkit-media-controls {
+   background-color: #9d8e8e1a; 
 }
 
+.au::-webkit-media-controls-play-button {
+  background-color: #db0b0b;
+  color: #eaf209;
+}
+
+
+@keyframes cambiarImagenes {
+  0% {
+    background-image: url("../IMG/nubes3.jpg");
+  }
+  50% {
+    background-image: url("../IMG/nubes2.jpg");
+  }
+  100% {
+    background-image: url("../IMG/nubes3.jpg");
+  }
+}
+
+
+  /*
 .img{
-  border: none;
-  width: auto ; 
+ border: none;
+
   position:absolute;
-  /* margin: 50px 50px  50px 100px; */
-  width: 1597px;
-  height: 795px;
-  left: 0px;
-  right: 0px;
-}
+  /* margin: 50px 50px  50px 100px; 
+  width: 100%;
+  height: 234%;
+  left: 0%; 
+ 
+}*/
 .img2{
-  position:absolute;
-  /* bottom: 200px; */
-width: 100%; 
-top: 222px;
-left: 100px;
+  position:relative;
+ width: 30%;
+top: 40%;
+left: 0%;
   animation-duration: 5s;
-  animation-name: plane;
+  animation-name: plane ;
   animation-direction:initial;
-  animation-iteration-count:1;
- /* animation-timing-function: cubic-bezier(10.2,5,5.8,2); */
- /* animation-timing-function:cubic-bezier(0.2,-5,5.0,5); */
- animation-timing-function: linear;
-  cursor: url("../IMG/9.1.png"), auto;  
+  animation-iteration-count:infinite;
+  cursor: url("../IMG/9.1.png"), auto; 
+ 
+ 
 }
 
 
 @keyframes plane {
 
-  from {
+   /* from {
   width: 0%;
-  top :200px;
-   
+  top :0px;
   }
 
   15% { 
     top: 300px;
-    /* animation-timing-function:cubic-bezier(10.175, 5.885, 2.32, 9.275); */
-  }
-   35% {
-    top: 280px;
-  
-  }  
+  } */
+   20% { 
+ 
+    top: 30%;
+    animation-timing-function:ease-out
+   
+   }  
    55% {
-    
-    top: 270px;
+    top: 38%;
+    width: 30%;
+    animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
    
   } 
   100% {
-   width: 100%;
-    top: 220px;
-     animation-timing-function: linear; 
-    
-  }
+ 
+   width: 30%;
+    top: 40%;
+    animation-timing-function:ease-in
+  }  
+  /* 50% { 
+ 
+    top: 280px;
+    animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
    
-  to {
-
-  
-  }
-
+   } 
+   100% {
+   
+   width: 30%;
+    top: 40%;
+   }    */
 
 }
 
 
 
+
+.img3{
+  width: 20%;
+  left: 75%;
+  top: 10%;
+ 
+  position: absolute;
+  border-radius: 10px 0px 50px 50px;
+  border:5px solid rgba(1, 1, 22, 0.945);
+  box-shadow: 40px 20px 20px 10px  #0a0a0a;
+}
+
+@media screen and (max-width: 700px) {
+  .img3 {
+    width: 20%;
+    left: 75%;
+    top: 10%;
+   
+    position: absolute;
+    border-radius: 10px 0px 50px 50px;
+    border:5px solid rgba(1, 1, 22, 0.945);
+    box-shadow: 20px 0px 50px 0px  #0a0a0a;
+  }
+}
 
 
 
 
 .img4{
-  width: 600px;
-  height: 150px;
-  left: -300px;
-  top:100px;
+  width: 20%;
+ 
+  right: 50%;
+  top: 20%;
   position: relative;
-/*   
-  border:5px solid rgba(1, 1, 22, 0.945); 
-   box-shadow: 50px 35px 50px  #0a0a0a; */
 }
 
-.img3{
-  width: 400px;
-  left: 750px;
-  top:200px;
-  position: relative;
-  border-radius: 10px 0px 50px 50px;
-  border:5px solid rgba(1, 1, 22, 0.945);
-  box-shadow: 50px 35px 50px  #0a0a0a;
-}
+
 
 
 
 .button{
-
     position: relative;
     top: 50px; 
     left: 150px;
@@ -110,8 +161,6 @@ left: 100px;
     box-shadow: 10px 10px 10px #0a0a0a;
     cursor: url(../IMG/2.9.1.png), auto;
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-    
 } 
 
 
@@ -127,19 +176,24 @@ left: 100px;
 
 
 .text2{
-  position: relative;
-  display: flex;
-  flex-direction: row;
+  position: absolute;
+   display: flex;
+  flex-direction: row; 
   background-color: aqua;
-  left: 900px;
-  top: 170px;
-  width: 600px;
+  left: 1%;
+  top: 90%;
+  width: 40%;
   border-radius: 5px;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   font-family: Consolas;
   justify-content: space-evenly;
   font-size: small;
 }
+
+
+
+
+
 
 
 .text3 {
@@ -171,7 +225,24 @@ left: 100px;
 
 
 
-
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .text2 {
+    box-shadow: 50px 50px  50px  #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    top: 18%;
+    width: 20%;
+    background-color: rgba(36, 106, 106, 0.176);
+  }
+  .au{
+    right:25%;
+    top: 5%;
+  }
+}
 
 
 

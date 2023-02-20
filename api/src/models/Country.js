@@ -45,7 +45,19 @@ area: {
 population: {
     type: DataTypes.INTEGER,
     allowNull: true
-   } 
+   } ,
+
+   latlng:{
+    type:DataTypes.STRING,
+    allowNull:true
+   },
+   timezones:{
+    type:DataTypes.STRING,
+    allowNull:true
+   },
+   
+
+
   });
 };
   

@@ -57,7 +57,7 @@ height: 100%;
     border-radius: 5%;
          width: 60%;
         bottom: 4%;
-        height: 60%; 
+        height: 70%; 
         left: 1%;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ height: 100%;
     position: absolute;
     left: 3%;
     height: 25px;
-    bottom: 80%;
+    bottom: 95%;
    /* border: 0px solid; */
    background-color: rgba(237, 8, 8, 0.656);
     cursor: pointer;
@@ -111,7 +111,7 @@ height: 100%;
 
 .text{
     position: absolute;
-    bottom: 70%;
+    bottom: 90%;
     color: aliceblue;
     right: 61%;
 }
@@ -155,6 +155,8 @@ height: 100%;
 .error {
  color: rgb(255, 12, 12);
  font-size: 20px;
+ position: relative;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 

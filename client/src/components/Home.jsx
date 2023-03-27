@@ -16,7 +16,7 @@ export default function Home(){
     const [searchValue, setSearchValuetName] = useState("")
     const [order, setOrder] = useState('');
     const dispatch = useDispatch()
-   
+    function setcurrent(){setCurrentPage(1)}
     const allCountries = useSelector((state) => state.countries)
     //{ estados globales 
     const [currentPage,setCurrentPage] = useState(1) //estado con la página actual y un estado que
@@ -39,11 +39,12 @@ export default function Home(){
         setCurrentPage(pageNumber)
     }
 
-function setcurrent(){setCurrentPage(1)}
+
 
     useEffect(()=>{
         dispatch(GetCountries());
         // dispatch(filContinent())
+        //setcurent
     },[dispatch])
 
 
@@ -106,10 +107,10 @@ function handlePopulations(e) {
      <div>
           <div className={`nav && ${style.nav} `}>
              <Link to= "/Activity">
-                <button className={`button && ${style.button}`}>Crear actividad</button>                                                       
+                <button className={`button && ${style.button}`}>Create activity</button>                                                       
              </Link>
              <input className={ `search && ${style.search}`}type='text'  value={searchValue} placeholder="Search country ...   "    onChange={(e)=>  {handleInputChange(e)}} />
-            <button className={style.button6}  type="submit"  onClick={(e) => handleSubmit(e)} >buscar              🔍</button>
+            <button className={style.button6}  type="submit"  onClick={(e) => handleSubmit(e)} >Search              🔍</button>
                                                                                                                                                          {/* {handleInputChange(e)};  */}
          
           <button className={` ${style.button5}`} onClick={e=>{handleClick(e)}}>Clean filters    🧹</button>

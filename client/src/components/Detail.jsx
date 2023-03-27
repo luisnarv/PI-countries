@@ -39,7 +39,7 @@ return (
 <Link  to = "/Home"><img className={`${style.button}`}src={img1} alt="img1"></img></Link>
  
  
-<Link  to = "/Activity"> <p className={` ${style.button2}`}>Created activity</p></Link>
+<Link  to = "/Activity"> <p className={` ${style.button2}`}>Create activity</p></Link>
 
 
 

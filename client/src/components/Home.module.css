@@ -242,7 +242,7 @@ position: relative;
     /* position: relative; */
     /* right: 10%; */
     /* border-radius: 5px; */
-    color: aqua;
+    color: rgb(0, 0, 0);
   }
   .button2{
     left: 35%;
@@ -250,7 +250,7 @@ position: relative;
     position: absolute;
     top: 18.3%;
     bottom: 79%;
-    background-color: rgb(30, 32, 29);
+    background-color: rgb(179, 189, 174);
     /* border: 3px solid; */
     /* border-radius: 5px; */
     /* cursor: point*/
@@ -260,7 +260,7 @@ position: relative;
     bottom: 82%;
     position: absolute;
     top: 15.2%;
-    background-color: rgb(30, 32, 29);
+    background-color: rgb(176, 191, 169);
   }
 
   .button4{
@@ -269,7 +269,7 @@ position: relative;
     top: 21.2%;
     right: 27%;
     border-radius: 5%;
-       background-color: rgb(30, 32, 29);
+       background-color: rgb(172, 180, 168);
        /* border-radius: 0%;*/
   }
 
@@ -281,7 +281,7 @@ position: relative;
    /* position: absolute;
    right: 100px;
    border-radius: 0%; */
-    background-color: rgb(30, 32, 29);
+    background-color: rgb(179, 189, 175);
   }
 
   .button6{

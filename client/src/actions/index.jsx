@@ -3,6 +3,9 @@ import axios from "axios";
 
  const url = "http://localhost:3001/";
 
+
+
+
 export function GetCountries() {
     return async function (dispatch) {
         try {
@@ -68,46 +71,72 @@ export function SearchCountry(name) {
             return dispatch({
                 type: "FAILURE",
                 payload: error.response.data.msg
-                && alert("Not Found")
+                //  && alert("Not Found")
+                && alert(error.response.data.msg)
             }) 
         }
     }
 }
 
-//GetActivity
-// export function GetActivity() {
-//     return async function (dispatch) {
-//         try {
-//             const res = await axios.get("http://localhost:3001/activity");
-//             return dispatch({
-//                 type: "GET_ACTIVITY",
-//                 payload: res.data
-//             })
-//         } catch (error) {
-//             console.log(error)
-//         }
-//     }
-// }
-export function GetActivity() {
-        return async function (dispatch) {
-            var res =  await axios.get("http://localhost:3001/activities",{
 
-            });
-            return dispatch({ type: "GET_ACTIVITY",
-        payload: res.data});
-    }}
+
+
+//    GetActivity
+export function GetActivity() {
+    return async function (dispatch) {
+        try {
+            const res = await axios.get("http://localhost:3001/activity");
+            return dispatch({
+                type: "GET_ACTIVITY",
+                payload: res.data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+// export function GetActivity() {
+//         return async function (dispatch) {
+//             var res =  await axios.get("http://localhost:3001/activities",{
+
+//             });
+//             return dispatch({ type: "GET_ACTIVITY",
+//         payload: res.data});
+//     }}
 
 
 
 
     //PostACtivity
 
-export function PostACtivity(payload){
-    return async function (dispatch){
-        const res = await axios.post("http://localhost:3001/activities", payload);
-        return res;
+// export function PostACtivity(payload){
+//     return async function (dispatch){
+//         const res = await axios.post("http://localhost:3001/activities", payload);
+//         return res;
+//     }
+// }
+
+
+export function PostACtivity(payload) {
+    return async function (dispatch) {
+        try {
+            const res = await axios.post("http://localhost:3001/activities", payload)
+            return  res
+                // type: "SearCountry",
+                // payload: res.data  
+               && alert("Created")
+        } catch (error) {
+            alert("Failed to create")
+            // return  error.response.data.msg && alert("Not Found")
+                
+                
+                // && alert(error.response.data.msg)
+            }
+        }
     }
-}
+
+
+
 
 
 //GetDetail

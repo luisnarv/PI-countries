@@ -8,8 +8,7 @@ import img4 from "../IMG/1.8.png";
 import son from "../audio/1.mp3"
  function Landing() {
 
-  const audio = new Audio(son);
-  audio.play();
+ 
 
   return (
     
